@@ -1,10 +1,10 @@
-﻿using StarKindred.Common.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Weapons;
 
@@ -24,7 +24,7 @@ public sealed class Repair
 
         var weapon = await db.Weapons
             .Include(w => w.Vassal!)
-                .ThenInclude(v => v.Leader)
+                .ThenInclude(v => v.LeadershipPosition)
             .FirstOrDefaultAsync(w => w.Id == weaponId && w.UserId == session.UserId, cToken)
             ?? throw new NotFoundException("Weapon does not exist.");
         

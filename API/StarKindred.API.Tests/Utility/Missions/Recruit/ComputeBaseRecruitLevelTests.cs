@@ -1,6 +1,6 @@
 using FluentAssertions;
+using StarKindred.API.Database.Models;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
 using Xunit;
 
 namespace StarKindred.API.Tests.Utility.Missions.Recruit;

@@ -7,6 +7,7 @@ using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Accounts;
 

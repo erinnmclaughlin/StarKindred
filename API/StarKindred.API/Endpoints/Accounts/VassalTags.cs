@@ -1,9 +1,9 @@
 using EFCoreSecondLevelCacheInterceptor;
-using StarKindred.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Services;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Accounts;
 

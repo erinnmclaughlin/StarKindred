@@ -1,10 +1,10 @@
-﻿using StarKindred.Common.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.TimedMissions;
 
@@ -39,7 +39,7 @@ public sealed class Start
         var vassals = await db.Vassals
             .Include(v => v.StatusEffects)
             .Include(v => v.Weapon)
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .AsSplitQuery()
             .Where(v => request.Vassals.Contains(v.Id) && v.UserId == session.UserId)
             .ToListAsync(cToken);
@@ -47,7 +47,7 @@ public sealed class Start
         if(vassals.Count != request.Vassals.Count)
             throw new UnprocessableEntity("One or more of the selected Vassals could not be found...");
 
-        if(vassals.Any(v => v.IsOnAMission || v.Leader != null))
+        if(vassals.Any(v => v.IsOnAMission || v.LeadershipPosition != null))
             throw new UnprocessableEntity("One or more of the selected Vassals is busy with another task.");
 
         MissionMath.ValidateVassalStatusEffects(timedMission.Type, vassals);

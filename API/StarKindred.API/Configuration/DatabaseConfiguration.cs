@@ -1,6 +1,6 @@
 ﻿using EFCoreSecondLevelCacheInterceptor;
 using Microsoft.EntityFrameworkCore;
-using StarKindred.Common.Services;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Configuration;
 

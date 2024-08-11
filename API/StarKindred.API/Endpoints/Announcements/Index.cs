@@ -1,13 +1,13 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
+using StarKindred.API.Database.Models;
 using StarKindred.API.Entities;
 using StarKindred.API.Extensions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Announcements;
 

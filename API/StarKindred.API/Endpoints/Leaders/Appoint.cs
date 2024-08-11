@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Leaders;
 
@@ -27,14 +27,14 @@ public sealed class Appoint
             throw new AccessDeniedException("You must complete more missions for The Oracle.");
 
         var vassal = await db.Vassals
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .FirstOrDefaultAsync(v => v.UserId == session.UserId && v.Id == request.VassalId, cToken)
             ?? throw new NotFoundException("Vassal not found.");
 
         if (vassal.IsOnAMission)
             throw new UnprocessableEntity("Vassal is on a mission.");
 
-        if(vassal.Leader != null)
+        if(vassal.LeadershipPosition != null)
             throw new UnprocessableEntity("Vassal already holds a leadership position.");
 
         var positionAlreadyFilled = await db.TownLeaders.AnyAsync(

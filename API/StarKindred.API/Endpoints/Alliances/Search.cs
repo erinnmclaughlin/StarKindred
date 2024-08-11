@@ -1,11 +1,11 @@
 using FluentValidation;
 using StarKindred.API.Utility;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Extensions;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Alliances;
 

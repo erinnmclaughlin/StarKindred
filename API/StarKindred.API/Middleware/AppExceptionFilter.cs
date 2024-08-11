@@ -27,7 +27,7 @@ public class AppExceptionFilter: IExceptionFilter
         context.HttpContext.Response.StatusCode = appException.StatusCode;
 
         if(appException is TooFastException tooFast)
-            context.HttpContext.Response.Headers.Add("Retry-After", tooFast.RetryInSeconds.ToString());
+            context.HttpContext.Response.Headers.Append("Retry-After", tooFast.RetryInSeconds.ToString());
         
         context.Result = new JsonResult(new ApiResponse()
         {

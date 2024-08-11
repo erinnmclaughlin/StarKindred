@@ -1,9 +1,9 @@
 using BenMakesGames.RandomHelpers;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using Humanizer;
 using StarKindred.API.Endpoints.TimedMissions;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Utility.TimedMissions;
 

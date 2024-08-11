@@ -1,7 +1,7 @@
 using System.Text;
 using BenMakesGames.RandomHelpers;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
+using StarKindred.API.Database.Models;
 using StarKindred.API.Entities;
 
 namespace StarKindred.API.Utility;

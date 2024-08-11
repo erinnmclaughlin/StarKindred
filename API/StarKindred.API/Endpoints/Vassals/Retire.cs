@@ -1,12 +1,12 @@
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
@@ -25,7 +25,7 @@ public sealed class Retire
         var user = await db.Users.FirstAsync(u => u.Id == session.UserId, cToken);
 
         var vassal = await db.Vassals
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .FirstOrDefaultAsync(v => v.Id == vassalId && v.UserId == session.UserId, cToken)
             ?? throw new NotFoundException("That Vassal does not exist.");
 
@@ -35,7 +35,7 @@ public sealed class Retire
         if(vassal.IsOnAMission)
             throw new UnprocessableEntity("You cannot retire a Vassal while they're on a mission.");
 
-        if(vassal.Leader != null)
+        if(vassal.LeadershipPosition != null)
             throw new UnprocessableEntity("You cannot retire a Vassal while they hold a leadership position.");
 
         if(vassal.RetirementPoints < 10)

@@ -1,13 +1,13 @@
 ﻿using BenMakesGames.RandomHelpers;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Services;
 using StarKindred.API.Utility.Buildings;
 using StarKindred.API.Utility.Technologies;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Towns;
 
@@ -103,11 +103,11 @@ public sealed class My
         ));
     }
 
-    private static async Task<List<Common.Entities.Db.Goodie>> AddGoodies(
+    private static async Task<List<Database.Models.Goodie>> AddGoodies(
         Db db,
         Random rng,
         Guid userId,
-        List<Common.Entities.Db.Goodie> goodies,
+        List<Database.Models.Goodie> goodies,
         int numberOfGoodies,
         Town town,
         List<TechnologyType> technologies,
@@ -146,7 +146,7 @@ public sealed class My
             if (type == ResourceType.Quintessence)
                 quantity *= (astrologyCount + 1);
 
-            var goodie = new Common.Entities.Db.Goodie()
+            var goodie = new Database.Models.Goodie
             {
                 UserId = userId,
                 Location = availableLocations[0],

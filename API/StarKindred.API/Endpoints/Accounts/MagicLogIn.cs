@@ -1,10 +1,10 @@
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Accounts;
 

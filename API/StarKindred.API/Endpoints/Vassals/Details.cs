@@ -1,6 +1,5 @@
 ﻿using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
@@ -8,6 +7,7 @@ using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
 using StarKindred.API.Utility.Technologies;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
@@ -49,7 +49,7 @@ public sealed class Details
             .Include(v => v.Weapon)
             .Include(v => v.Tags)
             .Include(v => v.Relationships!.OrderByDescending(r => r.Minutes))
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .AsSplitQuery()
             .FirstOrDefaultAsync(v => v.Id == vassalId && v.UserId == session.UserId, cToken)
             ?? throw new NotFoundException("There is no such Vassal.");
@@ -103,7 +103,7 @@ public sealed class Details
                 vassal.Tags!.Select(t => new TagDto(t.Title, t.Color)).ToList(),
                 VassalMath.ResourcesToLevelUp(vassal, hasFreeTrade),
                 CreateMissionDto(vassal),
-                vassal.Leader?.Position,
+                vassal.LeadershipPosition?.Position,
                 CreateWeaponDto(vassal),
                 friendDtos
             ),

@@ -6,12 +6,12 @@ using StarKindred.API.Utility;
 using StarKindred.API.Utility.Adventures;
 using StarKindred.API.Utility.Missions;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Utility.Technologies;
-using StarKindred.Common.Entities.Db;
+using StarKindred.API.Database.Models;
 using StarKindred.Common.Extensions;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Stories;
 

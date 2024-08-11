@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
+using StarKindred.API.Database.Models;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
 
 namespace StarKindred.API.Utility.Buildings;
 

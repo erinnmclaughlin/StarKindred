@@ -1,11 +1,11 @@
 ﻿using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
@@ -28,7 +28,7 @@ public sealed class SpendWillpower
             .Include(v => v.Mission)
             .Include(v => v.TimedMission)
             .Include(v => v.StatusEffects)
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .AsSingleQuery()
             .FirstOrDefaultAsync(v => v.Id == vassalId && v.UserId == session.UserId, cToken)
             ?? throw new NotFoundException("There is no such Vassal.");

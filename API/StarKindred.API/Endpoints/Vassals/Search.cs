@@ -1,13 +1,13 @@
 using StarKindred.API.Utility;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Extensions;
 using StarKindred.API.Services;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
@@ -50,7 +50,7 @@ public sealed class Search
                 v.StatusEffects!.Select(s => s.Type).ToList(),
                 v.Tags!.Select(t => new TagDto(t.Title, t.Color)).ToList(),
                 v.IsOnAMission,
-                v.Leader != null
+                v.LeadershipPosition != null
             ))
             .AsSplitQuery()
             .AsPaginatedResultsAsync(request.Page, request.PageSize, cToken)
@@ -109,8 +109,8 @@ public static class IQueryableExtensions
 
     public static IQueryable<Vassal> WithLeader(this IQueryable<Vassal> query, bool? isLeader) => isLeader switch
     {
-        true => query.Where(v => v.Leader != null),
-        false => query.Where(v => v.Leader == null),
+        true => query.Where(v => v.LeadershipPosition != null),
+        false => query.Where(v => v.LeadershipPosition == null),
         _ => query
     };
 

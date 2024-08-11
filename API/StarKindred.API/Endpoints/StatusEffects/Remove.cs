@@ -1,11 +1,11 @@
 ﻿using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.StatusEffects;
 
@@ -24,7 +24,7 @@ public sealed class Remove
 
         var statusEffect = await db.StatusEffects
             .Include(se => se.Vassal!)
-                .ThenInclude(v => v.Leader)
+                .ThenInclude(v => v.LeadershipPosition)
             .FirstOrDefaultAsync(se => se.Id == id && se.Vassal!.UserId == session.UserId, cToken)
             ?? throw new NotFoundException("That status effect does not exist.");
 

@@ -1,8 +1,8 @@
 ﻿using BenMakesGames.RandomHelpers;
+using StarKindred.API.Database;
 using StarKindred.API.Entities;
 using StarKindred.API.Services;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 
 namespace StarKindred.API.Utility.Buildings.Powers;
 

@@ -1,6 +1,6 @@
-﻿using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
+using StarKindred.API.Database.Models;
 
 string[] monthNames = { "", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 

@@ -23,9 +23,7 @@ If you'd like to support me recreationally giving away thousands of lines of cod
 #### C# API Server
 
 1. Install the .NET 7.0 or later SDK - https://dotnet.microsoft.com/en-us/download/dotnet/7.0
-2. Install MariaDB or MySQL
-   * If you dislike MySQL (fair), and are handy with C# and EF, feel free to use PostgreSQL, or whatever else; it shouldn't be hard to modify the application accordingly. Don't forget to create a new set of migrations!
-
+2. Install SQL Server Express
 3. Install the dotnet EF tools - run `dotnet tool install --global dotnet-ef` from anywhere
 
 #### Angular Front-end

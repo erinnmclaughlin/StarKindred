@@ -1,4 +1,4 @@
-using StarKindred.Common.Entities.Db;
+using StarKindred.API.Database.Models;
 using StarKindred.API.Entities;
 
 namespace StarKindred.API.Utility;

@@ -1,7 +1,7 @@
-﻿using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
-using StarKindred.PostAnnouncement;
+﻿using StarKindred.PostAnnouncement;
 using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
+using StarKindred.API.Database.Models;
 
 Console.WriteLine("What is the announcement type?");
 Console.WriteLine("C. Change Log");
@@ -39,7 +39,7 @@ optionsBuilder.UseSqlServer(connectionString);
 
 var db = new Db(optionsBuilder.Options);
 
-db.Announcements.Add(new Announcement()
+db.Announcements.Add(new Announcement
 {
     Type = type,
     Body = markdown

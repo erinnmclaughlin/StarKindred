@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
 using StarKindred.API.Endpoints.Accounts;
 using StarKindred.Common.Services;
 using Xunit;

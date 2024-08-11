@@ -1,13 +1,13 @@
 using BenMakesGames.RandomHelpers;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using Humanizer;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Endpoints.Missions;
 using StarKindred.API.Entities;
 using StarKindred.API.Utility.Adventures;
 using StarKindred.API.Utility.Technologies;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Utility.Missions;
 

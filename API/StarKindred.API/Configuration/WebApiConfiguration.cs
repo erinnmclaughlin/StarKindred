@@ -1,6 +1,5 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using StarKindred.API.Middleware;
 using System.Text.Json.Serialization;

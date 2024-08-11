@@ -1,6 +1,6 @@
 using BenMakesGames.RandomHelpers;
+using StarKindred.API.Database.Models;
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
 
 namespace StarKindred.API.Utility;
 
@@ -18,7 +18,7 @@ public class VassalGenerator
             Sign = rng.NextEnumValue<AstrologicalSign>(),
             Nature = rng.NextEnumValue<Nature>(),
             Species = species,
-            StatusEffects = !hasMilitarization ? null : new()
+            StatusEffects = !hasMilitarization ? [] : new()
             {
                 new() { Type = StatusEffectType.Power, Strength = 2 }
             }

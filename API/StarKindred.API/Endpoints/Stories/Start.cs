@@ -1,11 +1,11 @@
 using StarKindred.Common.Entities;
-using StarKindred.Common.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Stories;
 
@@ -51,7 +51,7 @@ public sealed class Start
         var vassals = await db.Vassals
             .Include(v => v.StatusEffects)
             .Include(v => v.Weapon)
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .AsSplitQuery() // TODO: not profiled
             .Where(v => request.VassalIds.Contains(v.Id) && v.UserId == session.UserId)
             .ToListAsync(cToken);
@@ -65,7 +65,7 @@ public sealed class Start
                 throw new UnprocessableEntity($"At least one Vassal must be {requiredElement}-type.");
         }
 
-        if(vassals.Any(v => v.IsOnAMission || v.Leader != null))
+        if(vassals.Any(v => v.IsOnAMission || v.LeadershipPosition != null))
             throw new UnprocessableEntity("One or more of the selected Vassals is busy with another task.");
 
         MissionMath.ValidateVassalStatusEffects(storyStep.Type, vassals);

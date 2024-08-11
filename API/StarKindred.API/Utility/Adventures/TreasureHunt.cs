@@ -1,7 +1,7 @@
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using StarKindred.API.Entities;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Utility.Adventures;
 

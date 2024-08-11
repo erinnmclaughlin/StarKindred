@@ -1,6 +1,6 @@
-using StarKindred.Common.Services;
 using Microsoft.EntityFrameworkCore;
 using StarKindred.API.Exceptions;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Services;
 

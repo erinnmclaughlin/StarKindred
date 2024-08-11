@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\StarKindred.Common\StarKindred.Common.csproj" />
+      <ProjectReference Include="..\StarKindred.API\StarKindred.API.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
 using StarKindred.Common.Entities;
-using StarKindred.Common.Entities.Db;
-using StarKindred.Common.Services;
+using StarKindred.API.Database.Models;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +7,7 @@ using StarKindred.API.Entities;
 using StarKindred.API.Exceptions;
 using StarKindred.API.Services;
 using StarKindred.API.Utility;
+using StarKindred.API.Database;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
@@ -50,7 +50,7 @@ public sealed class AttackGiant
         var vassals = await db.Vassals
             .Include(v => v.StatusEffects)
             .Include(v => v.Weapon)
-            .Include(v => v.Leader)
+            .Include(v => v.LeadershipPosition)
             .AsSplitQuery() // TODO: not profiled
             .Where(v => v.UserId == session.UserId && request.Vassals.Contains(v.Id))
             .ToListAsync(cToken);
@@ -58,7 +58,7 @@ public sealed class AttackGiant
         if(vassals.Count != request.Vassals.Count)
             throw new UnprocessableEntity("One or more of the selected Vassals could not be found.");
 
-        if(vassals.Any(v => v.IsOnAMission || v.Leader != null))
+        if(vassals.Any(v => v.IsOnAMission || v.LeadershipPosition != null))
             throw new UnprocessableEntity("One or more of the selected Vassals is busy with another task.");
 
         if(vassals.Any(v => v.StatusEffects!.Any(se => se.Type == StatusEffectType.BrokenBone)))

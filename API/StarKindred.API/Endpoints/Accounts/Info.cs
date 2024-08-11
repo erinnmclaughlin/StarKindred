@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StarKindred.API.Database;
 using StarKindred.API.Entities;
 using StarKindred.API.Services;
-using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Accounts;
 
