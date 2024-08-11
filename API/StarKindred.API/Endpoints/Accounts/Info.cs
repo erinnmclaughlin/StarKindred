@@ -6,7 +6,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Accounts;
 
-[ApiController]
+[ApiController, Tags("Accounts")]
 public sealed class Info
 {
     [HttpGet("/accounts/info")]

@@ -8,7 +8,7 @@ using Stripe.Checkout;
 
 namespace StarKindred.API.Endpoints.Stripe;
 
-[ApiController]
+[ApiController, Tags("Stripe")]
 public sealed class Webhook
 {
     // TODO: this should be pulled out into appsettings.json

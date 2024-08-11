@@ -11,7 +11,7 @@ using StarKindred.API.Utility.Technologies;
 
 namespace StarKindred.API.Endpoints.Towns;
 
-[ApiController]
+[ApiController, Tags("Towns")]
 public sealed class MyDecorations
 {
     [HttpPost("/towns/my/decorations")]

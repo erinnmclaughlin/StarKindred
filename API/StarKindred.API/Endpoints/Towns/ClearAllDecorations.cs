@@ -5,7 +5,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Towns;
 
-[ApiController]
+[ApiController, Tags("Towns")]
 public class ClearAllDecorations
 {
     [HttpPost("/towns/my/decorations/clearAll")]

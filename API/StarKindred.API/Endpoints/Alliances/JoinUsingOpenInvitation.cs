@@ -10,7 +10,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class JoinUsingOpenInvitation
 {
     [HttpPost("alliances/{allianceId:guid}/join")]

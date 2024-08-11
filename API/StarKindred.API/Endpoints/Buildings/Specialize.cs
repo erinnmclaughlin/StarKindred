@@ -10,7 +10,7 @@ using StarKindred.API.Utility.Buildings;
 
 namespace StarKindred.API.Endpoints.Buildings;
 
-[ApiController]
+[ApiController, Tags("Buildings")]
 public sealed class Specialize
 {
     [HttpPost("/buildings/{buildingId:guid}/specialize")]

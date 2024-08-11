@@ -8,7 +8,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class DisableInviteCode
 {
     [HttpPost("alliances/disableInviteCode")]

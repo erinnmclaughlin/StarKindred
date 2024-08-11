@@ -10,15 +10,13 @@ while (sourceDb == null)
 {
     Console.WriteLine("Enter DB connection string for SOURCE database.");
 
-    var mysqlConnectionString = Console.ReadLine()?.Trim() ?? "";
+    var connectionString = Console.ReadLine()?.Trim() ?? "";
 
     try
     {
-        var mysqlServerVersion = ServerVersion.AutoDetect(mysqlConnectionString);
-
         var optionsBuilder = new DbContextOptionsBuilder<Db>();
 
-        optionsBuilder.UseMySql(mysqlConnectionString, mysqlServerVersion);
+        optionsBuilder.UseSqlServer(connectionString);
 
         sourceDb = new Db(optionsBuilder.Options);
     }
@@ -64,15 +62,13 @@ while (publishDb == null)
 {
     Console.WriteLine("Enter DB connection string to PUBLISH to.");
 
-    var mysqlConnectionString = Console.ReadLine()?.Trim() ?? "";
+    var connectionString = Console.ReadLine()?.Trim() ?? "";
 
     try
     {
-        var mysqlServerVersion = ServerVersion.AutoDetect(mysqlConnectionString);
-
         var optionsBuilder = new DbContextOptionsBuilder<Db>();
 
-        optionsBuilder.UseMySql(mysqlConnectionString, mysqlServerVersion);
+        optionsBuilder.UseSqlServer(connectionString);
 
         publishDb = new Db(optionsBuilder.Options);
     }

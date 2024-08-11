@@ -7,7 +7,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Accounts;
 
-[ApiController]
+[ApiController, Tags("Accounts")]
 public sealed class VassalTags
 {
     [HttpGet("/accounts/tags")]

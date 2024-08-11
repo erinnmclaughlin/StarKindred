@@ -8,7 +8,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Towns;
 
-[ApiController]
+[ApiController, Tags("Towns")]
 public sealed class Goodie
 {
     [HttpPost("/towns/my/goodies/{location:int}")]

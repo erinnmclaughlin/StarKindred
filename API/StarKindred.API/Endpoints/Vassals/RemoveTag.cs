@@ -8,7 +8,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class RemoveTag
 {
     [HttpPost("/vassals/{vassalId:guid}/tags/delete")]

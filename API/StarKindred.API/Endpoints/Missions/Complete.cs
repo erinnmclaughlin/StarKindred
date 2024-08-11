@@ -10,7 +10,7 @@ using StarKindred.API.Utility.Missions;
 
 namespace StarKindred.API.Endpoints.Missions;
 
-[ApiController]
+[ApiController, Tags("Missions")]
 public sealed class Complete
 {
     [HttpPost("/missions/{id:guid}/complete")]

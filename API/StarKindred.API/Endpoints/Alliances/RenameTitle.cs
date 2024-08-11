@@ -9,7 +9,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class RenameTitle
 {
     [HttpPost("alliances/titles/{id:guid}/rename")]

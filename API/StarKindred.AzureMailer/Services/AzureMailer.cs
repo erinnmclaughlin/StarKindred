@@ -1,5 +1,4 @@
 using Azure.Communication.Email;
-using Azure.Communication.Email.Models;
 using Microsoft.Extensions.Configuration;
 using StarKindred.Common.Services;
 
@@ -29,10 +28,10 @@ public class AzureMailer: IStarKindredMailer
             PlainText = messagePlainText
         };
 
-        var recipients = new EmailRecipients(new List<EmailAddress>() { new(to) });
+        var recipients = new EmailRecipients([new(to)]);
 
-        var emailMessage = new EmailMessage(SenderAddress, emailContent, recipients);
+        var emailMessage = new EmailMessage(SenderAddress, recipients, emailContent);
 
-        await EmailClient.SendAsync(emailMessage, cToken);
+        await EmailClient.SendAsync(Azure.WaitUntil.Completed, emailMessage, cToken);
     }
 }

@@ -61,7 +61,7 @@ public static class RelationshipHelper
         var loot = await DecorationHelper.CollectDecoration(db, vassals.First().UserId, lootType, 1, cToken);
 
         var randomRelationshipWithLevels = rng.Next(relationships.Where(r => r.Level > 0).ToList());
-        var randomVassal = rng.Next(randomRelationshipWithLevels.Vassals);
+        var randomVassal = rng.Next(randomRelationshipWithLevels.Vassals ?? []);
 
         var vassalsWithArtisticVision = vassals
             .Where(v => v.StatusEffects!.Any(se => se.Type == StatusEffectType.ArtisticVision))

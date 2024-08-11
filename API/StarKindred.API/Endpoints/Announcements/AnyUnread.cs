@@ -6,7 +6,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Announcements;
 
-[ApiController]
+[ApiController, Tags("Announcements")]
 public class AnyUnread
 {
     [HttpGet("announcements/anyUnread")]

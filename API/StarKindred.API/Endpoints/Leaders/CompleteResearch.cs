@@ -10,7 +10,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Leaders;
 
-[ApiController]
+[ApiController, Tags("Leaders")]
 public sealed class CompleteResearch
 {
     [HttpPost("leaders/{positionString}/completeResearch")]

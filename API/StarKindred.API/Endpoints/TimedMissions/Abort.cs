@@ -7,7 +7,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.TimedMissions;
 
-[ApiController]
+[ApiController, Tags("TimedMissions")]
 public sealed class Abort
 {
     [HttpPost("/timedMissions/{id:guid}/abort")]

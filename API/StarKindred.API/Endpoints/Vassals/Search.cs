@@ -11,7 +11,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class Search
 {
     [HttpGet("/vassals/search")]

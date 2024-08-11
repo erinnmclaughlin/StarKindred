@@ -9,7 +9,7 @@ using StarKindred.API.Extensions;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class Search
 {
     public const int PageSize = 20;

@@ -9,7 +9,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Accounts;
 
-[ApiController]
+[ApiController, Tags("Accounts")]
 public sealed class Logs
 {
     [HttpGet("accounts/logs")]

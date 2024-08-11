@@ -8,7 +8,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class WillpowerOptions
 {
     [HttpGet("/vassals/{vassalId:guid}/willpowerOptions")]

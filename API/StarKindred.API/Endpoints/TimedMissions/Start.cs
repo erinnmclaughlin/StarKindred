@@ -8,7 +8,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.TimedMissions;
 
-[ApiController]
+[ApiController, Tags("TimedMissions")]
 public sealed class Start
 {
     [HttpPost("/timedMissions")]

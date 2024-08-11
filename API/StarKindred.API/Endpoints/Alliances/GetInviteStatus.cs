@@ -7,7 +7,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class GetInviteStatus
 {
     [HttpGet("alliances/inviteStatus")]

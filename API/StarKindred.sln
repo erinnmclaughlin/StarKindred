@@ -1,18 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.API", "StarKindred.API\StarKindred.API.csproj", "{032A5FE5-D032-4C8B-BE8F-87F56F7F75B0}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35125.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.API", "StarKindred.API\StarKindred.API.csproj", "{032A5FE5-D032-4C8B-BE8F-87F56F7F75B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.Common.Tests", "StarKindred.Common.Tests\StarKindred.Common.Tests.csproj", "{5694567E-344B-4502-B700-3522DF1B857F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.Common.Tests", "StarKindred.Common.Tests\StarKindred.Common.Tests.csproj", "{5694567E-344B-4502-B700-3522DF1B857F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.Common", "StarKindred.Common\StarKindred.Common.csproj", "{60E1AFE9-ADE7-4E65-89B6-C609B69BF615}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.Common", "StarKindred.Common\StarKindred.Common.csproj", "{60E1AFE9-ADE7-4E65-89B6-C609B69BF615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.PostAnnouncement", "StarKindred.PostAnnouncement\StarKindred.PostAnnouncement.csproj", "{4ECF2F2D-ED01-4BD8-96FF-985B7B3F2354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.PostAnnouncement", "StarKindred.PostAnnouncement\StarKindred.PostAnnouncement.csproj", "{4ECF2F2D-ED01-4BD8-96FF-985B7B3F2354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.PublishStory", "StarKindred.PublishStory\StarKindred.PublishStory.csproj", "{B1517463-7B0D-499A-BD81-8DE45CE388D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.PublishStory", "StarKindred.PublishStory\StarKindred.PublishStory.csproj", "{B1517463-7B0D-499A-BD81-8DE45CE388D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.AzureMailer", "StarKindred.AzureMailer\StarKindred.AzureMailer.csproj", "{FC45383E-5233-457E-820C-D991F0AA2870}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.AzureMailer", "StarKindred.AzureMailer\StarKindred.AzureMailer.csproj", "{FC45383E-5233-457E-820C-D991F0AA2870}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.API.Benchmarks", "StarKindred.API.Benchmarks\StarKindred.API.Benchmarks.csproj", "{1D492EC9-106B-4AAB-9F6A-FB54EE1D44A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.API.Benchmarks", "StarKindred.API.Benchmarks\StarKindred.API.Benchmarks.csproj", "{1D492EC9-106B-4AAB-9F6A-FB54EE1D44A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{23F3C2CA-FF65-4E22-9C7C-BCBB2DCEB6E3}"
 EndProject
@@ -20,7 +23,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarks", "Benchmarks", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{28F98589-9169-4EF6-B971-FDAD27C6EE66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarKindred.API.Tests", "StarKindred.API.Tests\StarKindred.API.Tests.csproj", "{BED06F0B-16E3-48C7-A1C3-8536D53A28D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarKindred.API.Tests", "StarKindred.API.Tests\StarKindred.API.Tests.csproj", "{BED06F0B-16E3-48C7-A1C3-8536D53A28D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FFA717A4-1E46-4B08-B97F-745FB99D64B5}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,11 +69,17 @@ Global
 		{BED06F0B-16E3-48C7-A1C3-8536D53A28D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BED06F0B-16E3-48C7-A1C3-8536D53A28D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{5694567E-344B-4502-B700-3522DF1B857F} = {28F98589-9169-4EF6-B971-FDAD27C6EE66}
 		{4ECF2F2D-ED01-4BD8-96FF-985B7B3F2354} = {23F3C2CA-FF65-4E22-9C7C-BCBB2DCEB6E3}
 		{B1517463-7B0D-499A-BD81-8DE45CE388D4} = {23F3C2CA-FF65-4E22-9C7C-BCBB2DCEB6E3}
-		{5694567E-344B-4502-B700-3522DF1B857F} = {28F98589-9169-4EF6-B971-FDAD27C6EE66}
 		{1D492EC9-106B-4AAB-9F6A-FB54EE1D44A1} = {2B83289B-328D-4298-B521-189A2B79B42C}
 		{BED06F0B-16E3-48C7-A1C3-8536D53A28D5} = {28F98589-9169-4EF6-B971-FDAD27C6EE66}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D408E9A5-1791-482D-B1EE-C11D59766245}
 	EndGlobalSection
 EndGlobal

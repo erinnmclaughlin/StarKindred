@@ -8,7 +8,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Stories;
 
-[ApiController]
+[ApiController, Tags("Stories")]
 public sealed class Search
 {
     [HttpGet("/stories")]

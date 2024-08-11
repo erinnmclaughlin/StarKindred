@@ -8,7 +8,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Towns;
 
-[ApiController]
+[ApiController, Tags("Towns")]
 public sealed class View
 {
     [HttpGet("/towns/view/{id:guid}")]

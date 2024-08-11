@@ -7,7 +7,7 @@ using StarKindred.API.Exceptions;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class Details
 {
     [HttpGet("/alliances/{id:guid}")]

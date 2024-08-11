@@ -9,7 +9,7 @@ using StarKindred.API.Exceptions;
 
 namespace StarKindred.API.Endpoints.Accounts;
 
-[ApiController]
+[ApiController, Tags("Accounts")]
 public sealed class Create
 {
     public static readonly string[] AvailablePortraits =

@@ -7,7 +7,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Treasures;
 
-[ApiController]
+[ApiController, Tags("Treasures")]
 public sealed class MyDecorations
 {
     [HttpGet("/treasures/my/decorations")]

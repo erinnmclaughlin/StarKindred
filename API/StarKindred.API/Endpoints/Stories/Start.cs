@@ -9,7 +9,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Stories;
 
-[ApiController]
+[ApiController, Tags("Stories")]
 public sealed class Start
 {
     [HttpPost("/stories/{stepId:guid}/start")]

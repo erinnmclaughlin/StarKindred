@@ -12,7 +12,7 @@ public class SearchBenchmark
 
     public SearchBenchmark()
     {
-        var webAppFactory = new WebApplicationFactory<Startup>()
+        var webAppFactory = new WebApplicationFactory<Program>()
             .WithWebHostBuilder(builder =>
             {
                 builder.ConfigureServices(services =>

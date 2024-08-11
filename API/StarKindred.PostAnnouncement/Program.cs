@@ -31,13 +31,11 @@ Console.WriteLine();
 
 Console.WriteLine("Paste DB connection string to post this announcement.");
 
-var mysqlConnectionString = Console.ReadLine()?.Trim() ?? "";
-
-var mysqlServerVersion = ServerVersion.AutoDetect(mysqlConnectionString);
+var connectionString = Console.ReadLine()?.Trim() ?? "";
 
 var optionsBuilder = new DbContextOptionsBuilder<Db>();
 
-optionsBuilder.UseMySql(mysqlConnectionString, mysqlServerVersion);
+optionsBuilder.UseSqlServer(connectionString);
 
 var db = new Db(optionsBuilder.Options);
 

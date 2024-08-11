@@ -8,7 +8,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Accounts.Subscriptions;
 
-[ApiController]
+[ApiController, Tags("Accounts")]
 public sealed class Get
 {
     private const int PageSize = 12;

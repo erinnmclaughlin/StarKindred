@@ -9,7 +9,7 @@ using StarKindred.API.Utility.Buildings;
 
 namespace StarKindred.API.Endpoints.Buildings;
 
-[ApiController]
+[ApiController, Tags("Buildings")]
 public sealed class Harvest
 {
     [HttpPost("/buildings/{buildingId:guid}/harvest")]

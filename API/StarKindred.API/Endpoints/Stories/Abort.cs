@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace StarKindred.API.Endpoints.Stories;
 
-[ApiController]
+[ApiController, Tags("Stories")]
 public sealed class Abort
 {
     [HttpPost("/stories/{id:guid}/abort")]

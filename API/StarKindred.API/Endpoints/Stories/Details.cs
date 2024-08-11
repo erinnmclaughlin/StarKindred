@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace StarKindred.API.Endpoints.Stories;
 
-[ApiController]
+[ApiController, Tags("Stories")]
 public sealed class Details
 {
     [HttpGet("/stories/{adventureId:guid}")]

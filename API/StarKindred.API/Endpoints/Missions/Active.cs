@@ -9,7 +9,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Missions;
 
-[ApiController]
+[ApiController, Tags("Missions")]
 public sealed class Active
 {
     [HttpGet("/missions")]

@@ -15,7 +15,7 @@ using StarKindred.Common.Extensions;
 
 namespace StarKindred.API.Endpoints.Stories;
 
-[ApiController]
+[ApiController, Tags("Stories")]
 public sealed class Complete
 {
     [HttpPost("/stories/{id:guid}/complete")]

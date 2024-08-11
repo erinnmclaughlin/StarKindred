@@ -7,7 +7,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Buildings;
 
-[ApiController]
+[ApiController, Tags("Buildings")]
 public sealed class ActivateBuildingPower
 {
     [HttpPost("/buildings/{buildingId:guid}/activatePower")]

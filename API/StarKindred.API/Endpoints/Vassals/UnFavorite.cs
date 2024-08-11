@@ -7,7 +7,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class UnFavorite
 {
     [HttpPost("/vassals/{vassalId:guid}/unFavorite")]

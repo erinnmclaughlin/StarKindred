@@ -8,7 +8,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Treasures;
 
-[ApiController]
+[ApiController, Tags("Treasures")]
 public sealed class My
 {
     private static readonly TechnologyType[] RelevantTechnologies =

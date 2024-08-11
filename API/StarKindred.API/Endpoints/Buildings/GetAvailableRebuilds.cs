@@ -10,7 +10,7 @@ using StarKindred.API.Utility.Technologies;
 
 namespace StarKindred.API.Endpoints.Buildings;
 
-[ApiController]
+[ApiController, Tags("Buildings")]
 public sealed class GetAvailableRebuilds
 {
     [HttpGet("/buildings/{buildingId:guid}/rebuild")]

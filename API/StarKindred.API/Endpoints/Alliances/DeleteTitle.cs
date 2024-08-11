@@ -8,7 +8,7 @@ using StarKindred.API.Services;
 
 namespace StarKindred.API.Endpoints.Alliances;
 
-[ApiController]
+[ApiController, Tags("Alliances")]
 public sealed class DeleteTitle
 {
     [HttpPost("alliances/titles/{id:guid}/delete")]

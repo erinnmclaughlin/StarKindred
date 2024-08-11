@@ -10,7 +10,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class AddTag
 {
     [HttpPost("/vassals/{vassalId:guid}/tags")]

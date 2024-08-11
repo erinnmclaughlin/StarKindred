@@ -11,7 +11,7 @@ using StarKindred.Common.Services;
 
 namespace StarKindred.API.Endpoints.Announcements;
 
-[ApiController]
+[ApiController, Tags("Announcements")]
 public sealed class Index
 {
     public const int PageSize = 10;

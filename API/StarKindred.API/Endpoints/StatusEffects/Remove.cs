@@ -9,7 +9,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.StatusEffects;
 
-[ApiController]
+[ApiController, Tags("StatusEffects")]
 public sealed class Remove
 {
     [HttpPost("/statusEffects/{id:guid}/remove")]

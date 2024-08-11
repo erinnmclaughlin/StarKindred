@@ -10,7 +10,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class Retire
 {
     [HttpPost("/vassals/{vassalId:guid}/retire")]

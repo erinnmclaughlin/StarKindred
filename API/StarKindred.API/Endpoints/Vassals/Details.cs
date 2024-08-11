@@ -11,7 +11,7 @@ using StarKindred.API.Utility.Technologies;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class Details
 {
     private static readonly TreasureType[] UsefulTreasures =

@@ -10,7 +10,7 @@ using StarKindred.Common.Entities;
 
 namespace StarKindred.API.Endpoints.Weapons;
 
-[ApiController]
+[ApiController, Tags("Weapons")]
 public sealed class Scrap
 {
     [HttpPost("/weapons/{weaponId:guid}/scrap")]

@@ -1,7 +1,0 @@
-.idea/
-bin/
-obj/
-
-/StarKindred.API/appsettings.Development.json
-*.DotSettings.user
-

@@ -8,7 +8,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Accounts;
 
-[ApiController]
+[ApiController, Tags("Accounts")]
 public sealed class MagicLogIn
 {
     [HttpGet("/accounts/magicLogIn")]

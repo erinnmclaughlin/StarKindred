@@ -10,7 +10,7 @@ using StarKindred.API.Utility.TimedMissions;
 
 namespace StarKindred.API.Endpoints.TimedMissions;
 
-[ApiController]
+[ApiController, Tags("TimedMissions")]
 public sealed class Complete
 {
     [HttpPost("/timedMissions/{id:guid}/complete")]

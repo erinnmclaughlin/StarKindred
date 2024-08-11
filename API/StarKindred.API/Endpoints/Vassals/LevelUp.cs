@@ -9,7 +9,7 @@ using StarKindred.API.Utility;
 
 namespace StarKindred.API.Endpoints.Vassals;
 
-[ApiController]
+[ApiController, Tags("Vassals")]
 public sealed class LevelUp
 {
     [HttpPost("/vassals/{vassalId:guid}/levelUp")]
